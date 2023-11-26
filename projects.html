@@ -1,0 +1,27 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/projects/')
+      .then(response => setProjects(response.data))
+      .catch(error => console.error(error));
+  }, []);
+
+  return (
+    <div>
+      {projects.map(project => (
+        <div key={project.id}>
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+          <img src={project.image} alt={project.title} />
+          <a href={project.url}>View project</a>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Projects;
