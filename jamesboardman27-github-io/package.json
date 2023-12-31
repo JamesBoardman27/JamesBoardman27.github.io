@@ -2,7 +2,7 @@
   "name": "jamesboardman27-github-io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jamesboardman27.github.io/portfolio",
+  "homepage": "http://jamesboardman27.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
